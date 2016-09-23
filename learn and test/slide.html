@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>slide_test</title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		#container{
+			width: 1652px;
+			height: 460px;
+			border: 3px solid #333;
+			position: relative;
+			overflow: hidden;
+		}
+		#imgList{
+			width: 8260px;
+			height: 460px;
+			position: absolute;
+			z-index: 1;
+		}
+		#imgList img{
+			float: left;
+		}
+		#buttons{
+			position: absolute;
+			width: 100px;
+			height: 10px;
+			z-index: 2;
+			bottom:20px;
+			left: 826px;
+			margin-left: -50px;
+		}
+		#buttons span{
+			float: left;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			margin-right: 5px;
+			background: black;
+		}
+		#buttons .on{
+			background-color: orange;
+			cursor: pointer;
+			z-index: 2;
+		}
+		.arrow:hover{
+			background-color: purple;
+		}
+		#container .arrow{
+			color: grey;
+		}
+		#prev {
+			position: absolute;
+			top: 230px;
+			left: 20px;
+			width: 20px;
+			height: 20px;
+			z-index: 2;
+			text-align: center;
+			line-height: 20px;
+		}
+		#next {
+			position: absolute;
+			top: 230px;
+			right: 20px;
+			width: 20px;
+			height: 20px;
+			z-index: 2;
+			text-align: center;
+			line-height: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="imgList" style="left: -1652px;">
+			<img src="css/banner3.jpg">
+			<img src="css/banner1.jpg">
+			<img src="css/banner2.jpg">
+			<img src="css/banner3.jpg">
+			<img src="css/banner1.jpg">
+		</div>
+		<div id="buttons">
+			<span index="1" class="on"></span>
+			<span index="2"></span>
+			<span index="3"></span>
+		</div>
+		<div>
+			<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+			<a href="javascript:;" id="next" class="arrow">&gt;</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/slide.js"></script>
+</body>
+</html>
