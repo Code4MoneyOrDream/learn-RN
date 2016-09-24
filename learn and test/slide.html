@@ -8,17 +8,21 @@
 			margin: 0;
 			padding: 0;
 		}
+		/*
+		将所有图片并排放到一个div中然后再放到展示固定大少的窗口当中，
+		让带所有图片的div左右来回切换达到图片滑动
+		 */
 		#container{
-			width: 1652px;
+			width: 1652px;/* 这里是图片的宽高 */
 			height: 460px;
 			border: 3px solid #333;
-			position: relative;
-			overflow: hidden;
+			position: relative;/* 父容器作参考 */
+			overflow: hidden; /* 隐藏溢出的图片，因为图片左浮动，总宽度为8260 */
 		}
 		#imgList{
-			width: 8260px;
+			width: 8260px;/* 这里设置5张图片总宽度 */
 			height: 460px;
-			position: absolute;
+			position: absolute;/* 基于父容器container进行定位 */
 			z-index: 1;
 		}
 		#imgList img{
@@ -28,7 +32,7 @@
 			position: absolute;
 			width: 100px;
 			height: 10px;
-			z-index: 2;
+			z-index: 2;/* 按钮在图片的上面 */
 			bottom:20px;
 			left: 826px;
 			margin-left: -50px;
@@ -43,34 +47,35 @@
 		}
 		#buttons .on{
 			background-color: orange;
-			cursor: pointer;
 			z-index: 2;
 		}
-		.arrow:hover{
-			background-color: purple;
-		}
-		#container .arrow{
+		.arrow {
+			cursor: pointer;
+			display: none;
+			position: absolute;
 			color: grey;
+			width: 60px;
+			height: 60px;
+			line-height: 60px;
+			text-align: center;
+			font-size: 40px;
+			font-weight: bold;
+			text-decoration: none;
+			z-index: 2;
+		}
+		.arrow:hover {
+			background-color: rgba(0,0,0,1);
+		}
+		#container:hover .arrow {
+			display: block;
 		}
 		#prev {
-			position: absolute;
-			top: 230px;
+			top: 200px;
 			left: 20px;
-			width: 20px;
-			height: 20px;
-			z-index: 2;
-			text-align: center;
-			line-height: 20px;
 		}
 		#next {
-			position: absolute;
-			top: 230px;
+			top: 200px;
 			right: 20px;
-			width: 20px;
-			height: 20px;
-			z-index: 2;
-			text-align: center;
-			line-height: 20px;
 		}
 	</style>
 </head>
@@ -92,7 +97,7 @@
 			<a href="javascript:;" id="prev" class="arrow">&lt;</a>
 			<a href="javascript:;" id="next" class="arrow">&gt;</a>
 		</div>
+		<script type="text/javascript" src="js/slide.js"></script>
 	</div>
-	<script type="text/javascript" src="js/slide.js"></script>
 </body>
 </html>
