@@ -56,17 +56,17 @@ GET("http://study.163.com/webDev/hotcouresByCategory.htm",{},setHotCourses);
 
 function circle(){
 	var ohotCourses = document.getElementById("hotCourses");
-	var otop = parseInt(ohotCourses.style.top);
 	var timer;
-	
+
 	function autoplay(){
 		timer = setInterval(function(){
-			if (otop < -700){
+			var otop = parseInt(ohotCourses.style.top);
+			if (otop <= -700){
 				ohotCourses.style.top = 0;
 			}else{
 				ohotCourses.style.top = otop - 70 + "px";
 			}
-		},5000);
+		},1000);
 	}
 	autoplay();
 
