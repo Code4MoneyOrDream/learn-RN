@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="short icon" type="image/x-icon" href="taobaoLogo.ico">
+	<style type="text/css">
+		body{
+			width: 300px;
+			position: relative;
+		}
+		.aside{
+			width: 100px;
+			height: 150px;
+			float: left;
+			background-color: #f66;
+		}
+		.main{
+			height: 200px;
+			background-color: #fcc;
+			overflow: hidden;
+		}
+
+		.par{
+			margin-top: 50px;
+			margin-bottom: 50px;
+			border:5px solid #fcc;
+			width: 300px;
+			overflow: hidden;
+		}
+		.child{
+			border:5px solid #f66;
+			width: 100px;
+			height: 100px;
+			float: left;
+		}
+
+		p{
+			color: #f55;
+			background-color: #fcc;
+			width: 200px;
+			line-height: 100px;
+			text-align: center;
+			margin:100px;
+		}
+		.wrap{
+			overflow: hidden;
+		}
+	</style>
+</head>
+<body>
+	<div class="aside"></div>
+	<div class="main"></div>
+
+	<div class="par">
+		<div class="child"></div>
+		<div class="child"></div>
+	</div>
+
+	<div class="wrap">
+		<p>Haha</p>
+	</div>
+	<p>Hehe</p>
+</body>
+</html>
